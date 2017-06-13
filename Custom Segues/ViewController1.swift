@@ -19,10 +19,31 @@ class ViewController1: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
+	
+	
 
 	@IBAction func segueInitiator(_ sender: Any) {
 		performSegue(withIdentifier: "segue1", sender: self)
 	}
-
+	
+	@IBAction func unwindSegueForDismiss(_ segue : UIStoryboardSegue)
+	{
+	
+	}
+//	override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+//		if let id = identifier{
+//			if id == "unwindSegue1" {
+//				let unwindSegue = UnwindSegue1(identifier: id, source: fromViewController, destination: toViewController, performHandler: { () -> Void in
+//					
+//				})
+//				return unwindSegue
+//			}
+//		}
+//		
+//		return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
+//	}
+	
 }
+
+
 

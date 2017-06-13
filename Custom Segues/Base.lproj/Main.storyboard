@@ -27,6 +27,9 @@
                                     <constraint firstAttribute="width" constant="100" id="mpR-5f-IIt"/>
                                     <constraint firstAttribute="height" constant="100" id="zNL-Xy-Xlh"/>
                                 </constraints>
+                                <state key="normal" title="SEGUE 1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="segueInitiator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aZb-pw-dSi"/>
                                 </connections>
@@ -38,13 +41,14 @@
                             <constraint firstItem="Etk-rp-rOB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ziF-xR-Jnk"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DXt-nX-tKm"/>
                     <connections>
                         <segue destination="bGM-ii-EmB" kind="custom" identifier="segue1" customClass="Segue1" customModule="Custom_Segues" customModuleProvider="target" id="Exb-QU-nBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="139"/>
+            <point key="canvasLocation" x="1132" y="138.98050974512745"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="iDu-GD-CXd">
@@ -57,12 +61,35 @@
                     <view key="view" contentMode="scaleToFill" id="Zpf-oJ-KcX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cam-3C-Mri">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="4qW-vR-CET"/>
+                                    <constraint firstAttribute="width" constant="100" id="TfE-76-BPl"/>
+                                </constraints>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="unwindButton:" destination="bGM-ii-EmB" eventType="touchUpInside" id="rJf-eq-HCU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.5486021042" green="0.77526932950000005" blue="0.24534538389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cam-3C-Mri" firstAttribute="centerX" secondItem="Zpf-oJ-KcX" secondAttribute="centerX" id="UIS-re-NVC"/>
+                            <constraint firstItem="cam-3C-Mri" firstAttribute="centerY" secondItem="Zpf-oJ-KcX" secondAttribute="centerY" id="ZGT-zl-z7m"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="stc-FZ-eQs" kind="unwind" identifier="unwindSegue1" customClass="UnwindSegue1" customModule="Custom_Segues" customModuleProvider="target" unwindAction="unwindSegueForDismiss:" id="LOj-0b-9sf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1r-ny-fwW" sceneMemberID="firstResponder"/>
+                <exit id="stc-FZ-eQs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="993" y="139"/>
+            <point key="canvasLocation" x="1932" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
